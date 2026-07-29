@@ -1,0 +1,11 @@
+{
+  "name": "@sjonworld/studio",
+  "private": true,
+  "scripts": {
+    "dev": "node ../node_modules/@sanity/cli/bin/sanity dev",
+    "build": "node ../node_modules/@sanity/cli/bin/sanity build"
+  },
+  "dependencies": {
+    "styled-components": "^6.1.15"
+  }
+}
