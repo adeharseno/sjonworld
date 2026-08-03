@@ -11,4 +11,7 @@ if (!projectId || !dataset) {
 
 export default defineCliConfig({
   api: { projectId, dataset },
+  deployment: {
+    appId: "kzbck9xtkted7m0l5gglgcwt",
+  },
 });

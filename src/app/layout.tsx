@@ -1,13 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
 import { Toaster } from "sonner";
 
 import "./globals.css";
-
-const geist = Geist({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const description = "Be the first to know when SJONWORLD launches.";
 
@@ -34,8 +28,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  colorScheme: "light",
-  themeColor: "#FAFAFA",
+  colorScheme: "dark",
+  themeColor: "#0C0C0C",
 };
 
 export default function RootLayout({
@@ -43,9 +37,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${geist.className} min-h-screen`}>
+      <body className="min-h-screen">
         {children}
-        <Toaster position="top-center" richColors />
+        <Toaster
+          position="top-center"
+          theme="dark"
+          toastOptions={{ duration: 4500 }}
+        />
       </body>
     </html>
   );
