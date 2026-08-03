@@ -211,6 +211,7 @@ button, input { font: inherit; }
   font-weight: 900;
   font-stretch: condensed;
   letter-spacing: 0;
+  cursor: pointer;
   text-transform: uppercase;
 }
 
@@ -378,7 +379,8 @@ button, input { font: inherit; }
   .form-error {
     margin-top: min(.65rem, 1vh);
     margin-left: min(2.7rem, 4.2vh);
-    font-size: min(.82rem, 1.28vh);
+    font-size: min(1rem, 2.28vh);
+    font-style: italic;
   }
 }
 
