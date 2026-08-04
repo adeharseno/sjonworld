@@ -9,20 +9,39 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://sjonworld.com",
   ),
-  title: "SJONWORLD | Coming Soon",
+  title: "SjonWorld™ – Coming soon",
   description,
+  icons: {
+    icon: [
+      {
+        url: "/images/favicon/favicon-96x96.png",
+        type: "image/png",
+        sizes: "96x96",
+      },
+      { url: "/images/favicon/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/images/favicon/favicon.ico",
+    apple: [
+      {
+        url: "/images/favicon/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
+  manifest: "/images/favicon/site.webmanifest",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
     siteName: "SJONWORLD",
-    title: "SJONWORLD | Coming Soon",
+    title: "SjonWorld™ – Coming soon",
     description,
   },
   twitter: {
     card: "summary",
-    title: "SJONWORLD | Coming Soon",
+    title: "SjonWorld™ – Coming soon",
     description,
   },
 };
