@@ -34,10 +34,12 @@ export async function POST(request: Request) {
   const result = subscriberSchema.safeParse(payload);
 
   if (!result.success) {
+    const issues = result.error.flatten().fieldErrors;
+
     return NextResponse.json(
       {
-        message: "Enter a valid email address.",
-        issues: result.error.flatten().fieldErrors,
+        message: issues.email?.[0] ?? "Enter a valid email address.",
+        issues,
       },
       { status: 422 },
     );
