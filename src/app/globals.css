@@ -282,7 +282,7 @@ button, input { font: inherit; }
 }
 
 @keyframes brand-settle {
-  0%, 35% { bottom: 48%; transform: translateY(50%) scale(1.75); }
+  0%, 35% { bottom: 18%; transform: translateY(50%) scale(1.75); }
   100% { bottom: clamp(4rem, 8vh, 7rem); transform: translateY(0) scale(1); }
 }
 
@@ -298,22 +298,51 @@ button, input { font: inherit; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+@media (max-width: 1024px) {
+  .launch-content {
+    width: min(680px, calc(100vw - 3rem));
+  }
+  .launch-content h1 {
+    font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+  }
+  .access-form {
+    width: min(640px, 100%);
+    margin-top: clamp(1.5rem, 3vw, 2.25rem);
+  }
+  .access-field {
+    height: 72px;
+    padding: .4rem .45rem .4rem 2rem;
+  }
+  .access-field input {
+    height: 3.25rem;
+    font-size: clamp(.8rem, 1.8vw, 1.05rem);
+  }
+  .access-button {
+    width: 178px;
+    height: 56px;
+    font-size: 18px;
+  }
+  .brand-track span {
+    font-size: clamp(13rem, min(60vw, 50vh), 36rem);
+  }
+}
+
 @media (max-width: 640px) {
   .launch-content {
     top: clamp(6rem, 14vh, 8rem);
     left: 1.25rem;
     width: calc(100vw - 2.5rem);
   }
-  .launch-content h1 { font-size: clamp(1.5rem, 7.4vw, 2rem); }
-  .access-form { margin-top: 2rem; }
-  .access-field { height: 70px; padding: .35rem .35rem .35rem 1.3rem; }
-  .access-field input { height: 3.2rem; font-size: .78rem; }
-  .access-button { width: min(8.8rem, 40vw); height: 3.45rem; font-size: .875rem; }
+  .launch-content h1 { font-size: clamp(1.15rem, 5.5vw, 1.5rem); }
+  .access-form { margin-top: 1.5rem; }
+  .access-field { height: 60px; padding: .3rem .3rem .3rem 1.15rem; }
+  .access-field input { height: 2.8rem; font-size: .72rem; }
+  .access-button { width: min(8rem, 40vw); height: 3rem; font-size: .78rem; }
   .form-error { margin-left: 1.3rem; }
   .brand-stage { bottom: clamp(3rem, 8vh, 5rem); }
-  .brand-track span { font-size: clamp(6.5rem, min(34vw, 26vh), 11rem); }
+  .brand-track span { font-size: clamp(12rem, min(72vw, 52vh), 24rem); }
   @keyframes brand-settle {
-    0%, 35% { bottom: 50%; transform: translateY(50%) scale(2.15); }
+    0%, 35% { bottom: 18%; transform: translateY(50%) scale(2.15); }
     100% { bottom: clamp(3rem, 8vh, 5rem); transform: translateY(0) scale(1); }
   }
 }
