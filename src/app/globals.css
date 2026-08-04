@@ -252,7 +252,8 @@ button, input { font: inherit; }
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: marquee 15s linear infinite;
+  backface-visibility: hidden;
+  animation: marquee 15s 3.5s linear infinite;
 }
 
 .brand-track span {
@@ -288,8 +289,8 @@ button, input { font: inherit; }
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-25%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-25%, 0, 0); }
 }
 
 @keyframes content-in { to { opacity: 1; transform: translateY(0); } }
@@ -341,8 +342,9 @@ button, input { font: inherit; }
   .access-button { width: min(8rem, 40vw); height: 3rem; font-size: .78rem; }
   .form-error { margin-left: 1.3rem; }
   .brand-stage { bottom: clamp(3rem, 8vh, 5rem); }
+  .brand-stage { animation-name: brand-settle-mobile; }
   .brand-track span { font-size: clamp(12rem, min(72vw, 52vh), 24rem); }
-  @keyframes brand-settle {
+  @keyframes brand-settle-mobile {
     0%, 35% { transform: translate3d(0, 50%, 0) scale(2.15); }
     100% { transform: translate3d(0, 0, 0) scale(1); }
   }
