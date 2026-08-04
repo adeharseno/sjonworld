@@ -299,7 +299,7 @@ button, input { font: inherit; }
 
 @media (max-width: 1024px) {
   .launch-content {
-    width: min(680px, calc(100vw - 3rem));
+    width: min(530px, calc(100vw - 3rem));
   }
   .launch-content h1 {
     font-size: clamp(1.35rem, 3.2vw, 1.75rem);
@@ -375,7 +375,7 @@ button, input { font: inherit; }
 
   .launch-content {
     top: 13vh;
-    width: min(821px, 80.2vh, calc(100vw - 3rem));
+    width: min(821px, 70vh, calc(100vw - 3rem));
   }
 
   .launch-content h1 {
