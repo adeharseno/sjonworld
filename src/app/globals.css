@@ -237,6 +237,8 @@ button, input { font: inherit; }
   bottom: clamp(4rem, 8vh, 7rem);
   width: 100%;
   transform-origin: 0 100%;
+  will-change: transform;
+  backface-visibility: hidden;
   animation: brand-settle 3.5s cubic-bezier(.76,0,.18,1) both;
 }
 
@@ -281,8 +283,8 @@ button, input { font: inherit; }
 }
 
 @keyframes brand-settle {
-  0%, 35% { bottom: 18%; transform: translateY(50%) scale(1.75); }
-  100% { bottom: clamp(4rem, 8vh, 7rem); transform: translateY(0) scale(1); }
+  0%, 35% { transform: translate3d(0, 50%, 0) scale(1.75); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
 }
 
 @keyframes marquee {
@@ -341,8 +343,8 @@ button, input { font: inherit; }
   .brand-stage { bottom: clamp(3rem, 8vh, 5rem); }
   .brand-track span { font-size: clamp(12rem, min(72vw, 52vh), 24rem); }
   @keyframes brand-settle {
-    0%, 35% { bottom: 18%; transform: translateY(50%) scale(2.15); }
-    100% { bottom: clamp(3rem, 8vh, 5rem); transform: translateY(0) scale(1); }
+    0%, 35% { transform: translate3d(0, 50%, 0) scale(2.15); }
+    100% { transform: translate3d(0, 0, 0) scale(1); }
   }
 }
 
